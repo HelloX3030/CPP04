@@ -1,6 +1,6 @@
 # Compiler and flags
 CXX := c++
-CXXFLAGS := -Wall -Wextra -Werror -std=c++98
+CXXFLAGS := -Wall -Wextra -Werror -std=c++17
 NAME := a.out
 
 # vpath for header files
@@ -10,10 +10,10 @@ vpath %.hpp include/
 vpath %.cpp src/
 
 # .h and .hpp files
-H_FILES := Animal.hpp
+H_FILES := Animal.hpp Cat.hpp Dog.hpp
 
 # .cpp source files
-SRC_FILES := main.cpp Animal.cpp
+SRC_FILES := main.cpp Animal.cpp Cat.cpp Dog.cpp
 
 # Object directory and object files
 OBJ_DIR := obj
