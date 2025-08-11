@@ -10,10 +10,10 @@ vpath %.hpp include/
 vpath %.cpp src/
 
 # .h and .hpp files
-H_FILES := 
+H_FILES := Animal.hpp
 
 # .cpp source files
-SRC_FILES := main.cpp
+SRC_FILES := main.cpp Animal.cpp
 
 # Object directory and object files
 OBJ_DIR := obj
