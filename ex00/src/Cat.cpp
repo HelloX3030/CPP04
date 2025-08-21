@@ -1,7 +1,7 @@
 #include "../include/Cat.hpp"
 #include <iostream>
 
-Cat::Cat() : Animal("Cat") {
+Cat::Cat() : Animal(), type("Cat") {
     std::cout << CAT_COLOR << "Default constructor called for Cat" << RESET << std::endl;
 }
 

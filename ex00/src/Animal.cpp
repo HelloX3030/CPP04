@@ -5,10 +5,6 @@ Animal::Animal() : type("Animal") {
     std::cout << ANIMAL_COLOR << "Default constructor called for Animal" << RESET << std::endl;
 }
 
-Animal::Animal(std::string type) : type(type) {
-    std::cout << ANIMAL_COLOR << "Parameterized constructor called for Animal: " << type << RESET << std::endl;
-}
-
 Animal::~Animal() {
     std::cout << ANIMAL_COLOR << "Destructor called for Animal: " << type << RESET << std::endl;
 }

@@ -1,6 +1,7 @@
 #include "../include/Animal.hpp"
 #include "../include/Cat.hpp"
 #include "../include/Dog.hpp"
+#include "../include/WrongAnimal.hpp"
 #include <iostream>
 
 int main(void)
@@ -19,6 +20,7 @@ int main(void)
         delete i;
     }
 
+    std::cout << "=================== Custom Tests ===================" << std::endl;
     {
         Animal a1;
         a1.makeSound();
@@ -31,5 +33,17 @@ int main(void)
         Dog d1;
         d1.makeSound();
     }
+    {
+        WrongAnimal *wrong_animal = new WrongAnimal();
+        wrong_animal->makeSound();
+        std::cout << "Wrong Type: " << wrong_animal->getType() << std::endl;
+        delete wrong_animal;
+    }
+    // {
+    //     WrongAnimal *wrong_cat = new WrongCat();
+    //     wrong_cat->makeSound();
+    //     std::cout << "Wrong Type: " << wrong_cat->getType() << std::endl;
+    //     delete wrong_cat;
+    // }
     return 0;
 }
