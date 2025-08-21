@@ -6,7 +6,6 @@
 
 #define CAT_COLOR "\033[90m"
 
-
 class Cat : public Animal
 {
 private:
@@ -14,7 +13,7 @@ private:
 
 public:
     Cat();
-    virtual ~Cat();
+    ~Cat();
     Cat(const Cat &other);
     Cat &operator=(const Cat &other);
 

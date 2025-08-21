@@ -12,10 +12,12 @@ private:
 
 public:
 	Animal();
-	Animal(std::string type);
 	virtual ~Animal();
 	Animal(const Animal &other);
 	Animal &operator=(const Animal &other);
+	
+	// Special Constructors
+	Animal(std::string type);
 
 	// member functions
 	virtual void makeSound();
