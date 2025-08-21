@@ -18,5 +18,5 @@ public:
     Cat &operator=(const Cat &other);
 
     // member functions
-	void makeSound() override;
+	void makeSound() const override;
 };

@@ -7,7 +7,7 @@
 
 class Animal
 {
-private:
+protected:
 	std::string type;
 
 public:
@@ -20,5 +20,6 @@ public:
 	Animal(std::string type);
 
 	// member functions
-	virtual void makeSound();
+	virtual void makeSound() const;
+	std::string getType() const;
 };
