@@ -4,7 +4,7 @@
 
 #include <string>
 
-#define WRONG_CAT_COLOR "\033[90m"
+#define WRONG_CAT_COLOR "\033[36m"
 
 class WrongCat : public WrongAnimal
 {
