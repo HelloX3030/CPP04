@@ -1,23 +1,30 @@
 #include "../include/Dog.hpp"
+#include "../include/Brain.hpp"
 #include <iostream>
 
 Dog::Dog() : Animal() {
     std::cout << DOG_COLOR << "Default constructor called for Dog" << RESET << std::endl;
     type = "Dog";
+    brain = new Brain("Default Dog Idea");
 }
 
 Dog::~Dog() {
     std::cout << DOG_COLOR << "Destructor called for Dog" << RESET << std::endl;
+    delete brain;
 }
 
 Dog::Dog(const Dog &other) : Animal(other) {
     std::cout << DOG_COLOR << "Copy constructor called for Dog" << RESET << std::endl;
+    delete brain;
+    brain = new Brain(*other.brain);
 }
 
 Dog &Dog::operator=(const Dog &other) {
     std::cout << DOG_COLOR << "Assignment operator called for Dog" << RESET << std::endl;
     if (this != &other) {
         Animal::operator=(other);
+        delete brain;
+        brain = new Brain(*other.brain);
     }
     return *this;
 }

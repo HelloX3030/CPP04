@@ -24,3 +24,10 @@ Brain &Brain::operator=(const Brain &other) {
     }
     return *this;
 }
+
+// Special Constructor
+Brain::Brain(const std::string idea) {
+    std::cout << BRAIN_COLOR << "Brain special constructor called with idea: " << idea << RESET << std::endl;
+    for (int i = 0; i < BRAIN_SIZE; ++i)
+        ideas[i] = idea;
+}

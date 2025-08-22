@@ -6,8 +6,13 @@
 
 #define CAT_COLOR "\033[90m"
 
+class Brain;
+
 class Cat : public Animal
 {
+private:
+    Brain *brain;
+
 public:
     Cat();
     ~Cat();

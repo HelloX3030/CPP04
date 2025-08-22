@@ -16,5 +16,6 @@ public:
 	Brain(const Brain &other);
 	Brain &operator=(const Brain &other);
 
-	// member functions
+	// Special Constructors
+	Brain(const std::string idea);
 };
