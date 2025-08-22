@@ -3,8 +3,29 @@
 #include "../include/WrongCat.hpp"
 #include <iostream>
 
+#define ANIALS_AMOUNT 10
+
 int main(void)
 {
+    std::cout << "=================== Subject Tests ===================" << std::endl;
+    {
+        Animal *animals[ANIALS_AMOUNT];
+        for (int i = 0; i < ANIALS_AMOUNT; ++i) {
+            if (i % 2 == 0)
+                animals[i] = new Dog();
+            else
+                animals[i] = new Cat();
+        }
+        for (int i = 0; i < ANIALS_AMOUNT; ++i) {
+            std::cout << animals[i]->getType() << " ";
+            animals[i]->makeSound();
+            animals[i]->print();
+        }
+        for (int i = 0; i < ANIALS_AMOUNT; ++i) {
+            delete animals[i];
+        }
+    }
+    std::cout << "=================== Custom Tests ===================" << std::endl;
     {
         const Animal* meta = new Animal();
         const Animal* j = new Dog();
@@ -18,19 +39,20 @@ int main(void)
         delete j;
         delete i;
     }
-
-    std::cout << "=================== Custom Tests ===================" << std::endl;
     {
         Animal a1;
         a1.makeSound();
+        a1.print();
     }
     {
         Cat c1;
         c1.makeSound();
+        c1.print();
     }
     {
         Dog d1;
         d1.makeSound();
+        d1.print();
     }
     {
         WrongAnimal *wrong_animal = new WrongAnimal();

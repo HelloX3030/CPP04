@@ -23,4 +23,3 @@ public:
 	void makeSound() const override;
     void print() const override;
 };
-
