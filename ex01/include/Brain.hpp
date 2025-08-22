@@ -3,7 +3,7 @@
 #include <string>
 
 #define BRAIN_COLOR "\033[35m"
-#define BRAIN_SIZE 100
+#define BRAIN_SIZE 2
 
 class Brain
 {

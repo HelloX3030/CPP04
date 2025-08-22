@@ -24,6 +24,20 @@ int main(void)
             delete animals[i];
         }
     }
+    std::cout << "=================== Deep Copy Tests ===================" << std::endl;
+    {
+        Cat *cat1 = new Cat();
+        Cat *cat2 = new Cat(*cat1);
+        delete cat1;
+        cat2->print();
+        delete cat2;
+
+        Dog *dog1 = new Dog();
+        Dog *dog2 = new Dog(*dog1);
+        delete dog1;
+        dog2->print();
+        delete dog2;
+    }
     std::cout << "=================== Custom Tests ===================" << std::endl;
     {
         const Animal* meta = new Animal();

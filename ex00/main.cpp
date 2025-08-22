@@ -5,6 +5,7 @@
 
 int main(void)
 {
+    std::cout << "=================== Subject Tests ===================" << std::endl;
     {
         const Animal* meta = new Animal();
         const Animal* j = new Dog();
