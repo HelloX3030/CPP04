@@ -8,9 +8,6 @@
 
 class Cat : public Animal
 {
-private:
-	std::string type;
-
 public:
     Cat();
     ~Cat();

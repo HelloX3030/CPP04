@@ -2,8 +2,9 @@
 #include "../include/Animal.hpp"
 #include <iostream>
 
-WrongCat::WrongCat() : WrongAnimal(), type("WrongCat") {
+WrongCat::WrongCat() : WrongAnimal() {
     std::cout << WRONG_CAT_COLOR << "Default constructor called for WrongCat" << RESET << std::endl;
+    type = "WrongCat";
 }
 
 WrongCat::~WrongCat() {

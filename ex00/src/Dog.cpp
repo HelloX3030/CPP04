@@ -1,8 +1,9 @@
 #include "../include/Dog.hpp"
 #include <iostream>
 
-Dog::Dog() : Animal(), type("Dog") {
+Dog::Dog() : Animal() {
     std::cout << DOG_COLOR << "Default constructor called for Dog" << RESET << std::endl;
+    type = "Dog";
 }
 
 Dog::~Dog() {
