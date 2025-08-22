@@ -14,9 +14,9 @@ WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other) {
 }
 
 WrongCat &WrongCat::operator=(const WrongCat &other) {
+    std::cout << WRONG_CAT_COLOR << "Assignment operator called for WrongCat" << RESET << std::endl;
     if (this != &other) {
         WrongAnimal::operator=(other);
-        std::cout << WRONG_CAT_COLOR << "Assignment operator called for WrongCat" << RESET << std::endl;
     }
     return *this;
 }

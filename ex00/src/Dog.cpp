@@ -14,9 +14,9 @@ Dog::Dog(const Dog &other) : Animal(other) {
 }
 
 Dog &Dog::operator=(const Dog &other) {
+    std::cout << DOG_COLOR << "Assignment operator called for Dog" << RESET << std::endl;
     if (this != &other) {
         Animal::operator=(other);
-        std::cout << DOG_COLOR << "Assignment operator called for Dog" << RESET << std::endl;
     }
     return *this;
 }
