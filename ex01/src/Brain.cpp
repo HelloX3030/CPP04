@@ -31,3 +31,12 @@ Brain::Brain(const std::string idea) {
     for (int i = 0; i < BRAIN_SIZE; ++i)
         ideas[i] = idea;
 }
+
+// Member Functions
+void Brain::print_ideas() const {
+    std::cout << BRAIN_COLOR << "Brain ideas:" << RESET << std::endl;
+    for (int i = 0; i < BRAIN_SIZE; ++i) {
+        if (!ideas[i].empty())
+            std::cout << "Idea " << i + 1 << ": " << ideas[i] << std::endl;
+    }
+}

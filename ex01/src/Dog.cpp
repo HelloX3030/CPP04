@@ -32,3 +32,12 @@ Dog &Dog::operator=(const Dog &other) {
 void Dog::makeSound() const {
     std::cout << DOG_COLOR << "Dog barks" << RESET << std::endl;
 }
+
+void Dog::print() const {
+    std::cout << DOG_COLOR << "Dog type: " << type << RESET << std::endl;
+    if (brain) {
+        brain->print_ideas();
+    } else {
+        std::cout << DOG_COLOR << "Dog has no brain assigned." << RESET << std::endl;
+    }
+}

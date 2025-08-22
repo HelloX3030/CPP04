@@ -30,3 +30,12 @@ Cat &Cat::operator=(const Cat &other) {
 void Cat::makeSound() const {
     std::cout << CAT_COLOR << "Cat meows" << RESET << std::endl;
 }
+
+void Cat::print() const {
+    std::cout << CAT_COLOR << "Cat type: " << type << RESET << std::endl;
+    if (brain) {
+        brain->print_ideas();
+    } else {
+        std::cout << CAT_COLOR << "Cat has no brain assigned." << RESET << std::endl;
+    }
+}

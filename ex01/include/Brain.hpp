@@ -18,4 +18,7 @@ public:
 
 	// Special Constructors
 	Brain(const std::string idea);
+
+	// Member Functions
+	void print_ideas() const;
 };
