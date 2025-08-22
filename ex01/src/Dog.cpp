@@ -15,7 +15,6 @@ Dog::~Dog() {
 
 Dog::Dog(const Dog &other) : Animal(other) {
     std::cout << DOG_COLOR << "Copy constructor called for Dog" << RESET << std::endl;
-    delete brain;
     brain = new Brain(*other.brain);
 }
 

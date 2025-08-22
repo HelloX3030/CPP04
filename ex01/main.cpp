@@ -1,6 +1,5 @@
 #include "../include/Cat.hpp"
 #include "../include/Dog.hpp"
-#include "../include/WrongCat.hpp"
 #include <iostream>
 
 #define ANIALS_AMOUNT 10
@@ -43,28 +42,22 @@ int main(void)
         Animal a1;
         a1.makeSound();
         a1.print();
+        Animal a2 = a1;
+        Animal a3(a1);
     }
     {
         Cat c1;
         c1.makeSound();
         c1.print();
+        Cat c2 = c1;
+        Cat c3(c1);
     }
     {
         Dog d1;
         d1.makeSound();
         d1.print();
-    }
-    {
-        WrongAnimal *wrong_animal = new WrongAnimal();
-        wrong_animal->makeSound();
-        std::cout << "Wrong Type: " << wrong_animal->getType() << std::endl;
-        delete wrong_animal;
-    }
-    {
-        WrongAnimal *wrong_cat = new WrongCat();
-        wrong_cat->makeSound();
-        std::cout << "Wrong Type: " << wrong_cat->getType() << std::endl;
-        delete wrong_cat;
+        Dog d2 = d1;
+        Dog d3(d1);
     }
     return 0;
 }
