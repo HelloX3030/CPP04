@@ -20,8 +20,9 @@ AMateria::AMateria(const AMateria &other) : type(other.type)
 AMateria &AMateria::operator=(const AMateria &other)
 {
     std::cout << AMATERIA_COLOR << "AMateria copy assignment operator called" << RESET << std::endl;
-    if (this != &other)
-        type = other.type;
+    // No copying of 'type' like specified in the subject
+    // if (this != &other)
+    //     type = other.type;
     return *this;
 }
 
