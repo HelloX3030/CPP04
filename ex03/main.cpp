@@ -1,6 +1,7 @@
 #include "Ice.hpp"
 #include "Cure.hpp"
 #include "Character.hpp"
+#include "MateriaSource.hpp"
 #include <iostream>
 
 int main(void)
@@ -117,6 +118,61 @@ int main(void)
         Character* charHeap = new Character("HeapHero");
         std::cout << "charHeap constructed on heap, Name: " << charHeap->getName() << std::endl;
         delete charHeap;
+    }
+    {
+        std::cout << MATERIA_SOURCE_COLOR 
+                  << "=============================== Test MateriaSource Creation ===============================" 
+                  << RESET << std::endl;
+    
+        // 1. Default constructor
+        MateriaSource source1;
+        std::cout << "source1 constructed." << std::endl;
+    
+        // 2. Copy constructor
+        MateriaSource source2(source1);
+        std::cout << "source2 copy-constructed from source1." << std::endl;
+    
+        // 3. Copy assignment
+        MateriaSource source3;
+        source3 = source1;
+        std::cout << "source3 copy-assigned from source1." << std::endl;
+    
+        // 4. Learn Materia
+        Ice* ice = new Ice();
+        Cure* cure = new Cure();
+        source1.learnMateria(ice);
+        source1.learnMateria(cure);
+    
+        std::cout << "source1 learned ice and cure." << std::endl;
+    
+        // 5. Create Materia
+        AMateria* createdIce = source1.createMateria("ice");
+        AMateria* createdCure = source1.createMateria("cure");
+        AMateria* createdUnknown = source1.createMateria("fire");
+    
+        if (createdIce)
+            std::cout << "Created materia of type: " << createdIce->getType() << std::endl;
+        else
+            std::cout << "Could not create materia of type 'ice'." << std::endl;
+        if (createdCure)
+            std::cout << "Created materia of type: " << createdCure->getType() << std::endl;
+        else
+            std::cout << "Could not create materia of type 'cure'." << std::endl;
+        if (!createdUnknown)
+            std::cout << "Could not create unknown materia type 'fire'." << std::endl;
+        else
+            std::cout << "Created materia of type: " << createdUnknown->getType() << " even when it should not have been possible." << std::endl;
+    
+        // 6. Clean up
+        delete ice;
+        delete cure;
+        delete createdIce;
+        delete createdCure;
+    
+        // 7. Heap allocation test
+        MateriaSource* sourceHeap = new MateriaSource();
+        std::cout << "sourceHeap constructed on heap." << std::endl;
+        delete sourceHeap;
     }
     return 0;
 }
