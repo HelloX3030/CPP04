@@ -12,6 +12,7 @@ Cat::~Cat() {
     std::cout << CAT_COLOR << "Destructor called for Cat" << RESET << std::endl;
     delete brain;
 }
+
 Cat::Cat(const Cat &other) : Animal(other) {
     std::cout << CAT_COLOR << "Copy constructor called for Cat" << RESET << std::endl;
     brain = new Brain(*other.brain);

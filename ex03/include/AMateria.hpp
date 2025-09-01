@@ -2,6 +2,9 @@
 
 #include <string>
 
+#define RESET "\033[0m"
+#define AMATERIA_COLOR "\033[1;33m"
+
 class ICharacter;
 
 class AMateria
