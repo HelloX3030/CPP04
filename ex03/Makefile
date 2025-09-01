@@ -10,10 +10,10 @@ vpath %.hpp include/
 vpath %.cpp src/
 
 # .h and .hpp files
-H_FILES := AMateria.hpp ICharacter.hpp Ice.hpp Cure.hpp
+H_FILES := AMateria.hpp ICharacter.hpp Ice.hpp Cure.hpp Character.hpp
 
 # .cpp source files
-SRC_FILES := main.cpp AMateria.cpp Ice.cpp Cure.cpp
+SRC_FILES := main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp
 
 # Object directory and object files
 OBJ_DIR := obj
