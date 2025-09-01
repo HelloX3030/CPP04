@@ -36,5 +36,4 @@ AMateria* Ice::clone() const
 void Ice::use(ICharacter& target)
 {
     std::cout << ICE_COLOR << "* shoots an ice bolt at " << target.getName() << " *" << RESET << std::endl;
-    AMateria::use(target);
 }

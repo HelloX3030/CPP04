@@ -2,7 +2,7 @@
 #include "../include/AMateria.hpp"
 #include <iostream>
 
-Character::Character() : name("default Character")
+Character::Character() : ICharacter(), name("default Character")
 {
     for (int i = 0; i < CHARACTER_INVENTORY_SIZE; ++i)
         inventory[i] = nullptr;
@@ -19,7 +19,7 @@ Character::~Character()
     std::cout << CHARACTER_COLOR << "Character destructor called" << RESET << std::endl;
 }
 
-Character::Character(const Character &other) : name(other.name)
+Character::Character(const Character &other) : ICharacter(other), name(other.name)
 {
     for (int i = 0; i < CHARACTER_INVENTORY_SIZE; ++i)
     {
